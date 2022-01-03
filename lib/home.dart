@@ -19,10 +19,12 @@ class _HomeState extends State<Home> {
                 color: Colors.amber,
                 height: 100,
                 width: 100,
-                child: Text('images'),
+                child: Image(
+                    image: NetworkImage(
+                        'https://i.pinimg.com/736x/37/70/f9/3770f95cf2685d7015afa03e4e196e53.jpg')),
               ),
-              title: Text('title'),
-              subtitle: Text('subtitle'),
+              title: Text('mempercantik tampilan openbox'),
+              subtitle: Text('make openbox beautifu'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (c) => detail()));
