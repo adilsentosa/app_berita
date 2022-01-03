@@ -1,3 +1,4 @@
+import 'package:app_berita/detail.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -22,7 +23,10 @@ class _HomeState extends State<Home> {
               ),
               title: Text('title'),
               subtitle: Text('subtitle'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (c) => detail()));
+              },
             );
           }),
     );
