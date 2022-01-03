@@ -1,10 +1,17 @@
 import 'package:app_berita/detail.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
+
+   @override
+   void initState(){
+     super.initState();
+     _getData();
+   }
 
 class _HomeState extends State<Home> {
   @override
@@ -30,5 +37,12 @@ class _HomeState extends State<Home> {
             );
           }),
     );
+  }
+
+
+  Future _getData() async
+  try {
+    final response = await http.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=44d7883a586e474cac1693a772a3147b');
+  } catch (e) {
   }
 }
